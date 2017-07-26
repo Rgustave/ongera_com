@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body {
+
+   background:url('assets/images/bcgPicture.png')no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin:0px;
+   height:100%;
+   background-repeat: no-repeat; 
+}
+
+
+
+
+my-app:empty + .loading img {
+    margin: auto;
+    color: #EEE;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+}
