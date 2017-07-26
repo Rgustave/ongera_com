@@ -28,14 +28,6 @@ constructor(private authService:AuthService, private router:Router){
 
   ngOnInit(){
 
-         let username = new FormControl
-           (this.authService.currentUser.firstName)
-         let password = new FormControl
-           (this.authService.currentUser.lastName)
-         this.loginForm =  new FormGroup({
-            password:password,
-            username:username
-         })
 
        }
 
