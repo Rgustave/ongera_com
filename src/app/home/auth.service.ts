@@ -31,7 +31,8 @@ export class AuthService {
                             
                 if ( response.status === 201) {
                     this.token = token;
-                    localStorage.setItem('currentUser', JSON.stringify({ username: responseJSON.user.username, password:user.password, token: token }));
+                    localStorage.setItem('currentUser', JSON.stringify({ username: responseJSON.user.username, password:user.password,company:responseJSON.company,
+                        firstName:responseJSON.user.firstname,lastName:responseJSON.user.lastname,lastLogIn:responseJSON.user.last_since_last_login, token: token }));
                     return response.json()
                 } 
             }).catch(this.handleError)
