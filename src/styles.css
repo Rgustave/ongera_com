@@ -2,8 +2,8 @@
 
 .loading {
     opacity: 0;
-    transition: opacity .8s ease-in-out;
-    position: fixed;
+    /* transition: opacity .8s ease-in-out;
+    position: fixed; */
     height: 100%;
     width: 100%;
     margin:0 auto;
