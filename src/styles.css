@@ -13,15 +13,19 @@ body {
    background-repeat: no-repeat; 
 }
 
-
-
-
-my-app:empty + .loading img {
-    margin: auto;
-    color: #EEE;
-    position: absolute;
-    top: 50%;
+.loading {
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    position: fixed;
+    height: 100%;
     width: 100%;
-    text-align: center;
-    transform: translate(0, -50%);
+    margin:0 auto;
+    margin-top: 350px;
+    margin-left: 550px;
+    max-width:600px;
+    z-index: -1;
+}
+app-root:empty + .loading {
+    opacity: 1;
+    z-index: 100;
 }
