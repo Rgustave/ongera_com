@@ -25,7 +25,7 @@ export class AuthService {
         return this.http.post('https://ongera-api.herokuapp.com/bk/login', JSON.stringify(user),options)
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
-               
+                    console.log(user.password);
                     let token = response.json() && response.json().access_token ;
                     let responseJSON = response.json()
                             
