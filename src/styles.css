@@ -1,17 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-.loading {
-    opacity: 0;
-    /* transition: opacity .8s ease-in-out;
-    position: fixed; */
-    height: 100%;
-    width: 100%;
-    margin:0 auto;
-    margin-top: 350px;
-    margin-left: 550px;
-    max-width:600px;
-    z-index: -1;
-}
+
 body {
 
    background:url('/assets/img/bcgPicture.png')no-repeat center center fixed;
@@ -23,7 +12,19 @@ body {
    height:100%;
    background-repeat: no-repeat; 
 }
-
+.loading {
+    background:url('/assets/img/loading-main.gif')no-repeat center center fixed;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+    position: fixed; 
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+    margin-top: 350px;
+    margin-left: 550px;
+    max-width:600px;
+    z-index: -1;
+}
 
 app-root:empty + .loading {
     opacity: 1;
