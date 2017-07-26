@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import {AuthService} from './home/auth.service'
+import {AuthService} from './security/auth.service'
 
 
 import { AppComponent } from './app.component';
