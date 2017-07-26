@@ -3,18 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import {AuthService} from './home/auth.service'
 
 import { AppComponent } from './app.component';
 import { SubrouteComponent } from './subroute/subroute.component';
 
 import { ROUTES } from './app.routes';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubrouteComponent,
-    HomeComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,9 @@ import { HomeComponent } from './home/home.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+      AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
