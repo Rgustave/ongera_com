@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map'
 import { Http, Headers, Response,RequestOptions} from '@angular/http';
-import{IUser} from './user.model'
+import{IUser} from '../home/user.model'
 
 @Injectable()
 export class AuthService {
