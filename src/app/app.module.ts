@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import {AuthService} from './home/auth.service'
 
+
 import { AppComponent } from './app.component';
 import { SubrouteComponent } from './subroute/subroute.component';
 
