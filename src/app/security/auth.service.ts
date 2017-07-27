@@ -31,7 +31,7 @@ export class AuthService {
                             
                 if ( response.status === 201) {
                     this.token = token;
-                    localStorage.setItem('currentUser', JSON.stringify({ username: responseJSON.user.username, password:user.password,company:responseJSON.company,
+                    localStorage.setItem('currentUser', JSON.stringify({ username: responseJSON.user.username,company:responseJSON.company,
                         firstName:responseJSON.user.firstname,lastName:responseJSON.user.lastname,lastLogIn:responseJSON.user.last_since_last_login, token: token }));
                     return response.json()
                 } 
@@ -40,6 +40,11 @@ export class AuthService {
  
 
       public authenticaed (){
+            if (localStorage.getItem('currentUser')) {
+            console.log(" cheking if logged in")
+            return true;
+        }
+            return false;
 
       }
 
