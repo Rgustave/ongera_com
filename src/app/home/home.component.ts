@@ -45,7 +45,7 @@ constructor(private authService:AuthService, private router:Router){
       
             if(result){
               console.log(result)
-                  this.router.navigate(['/subroute'])
+                  this.router.navigate(['/operation'])
 
             }
        },(err)=>{
