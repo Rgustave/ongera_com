@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import {AuthService} from './security/auth.service'
+import {AuthService} from './security/auth.service';
+import {AuthGuard} from './security/auth.guard';
+
 
 
 import { AppComponent } from './app.component';
@@ -25,7 +27,7 @@ import { LoginComponent } from './home/home.component';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-      AuthService
+      AuthService,AuthGuard
   ],
   bootstrap: [AppComponent]
 })
