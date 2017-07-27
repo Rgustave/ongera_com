@@ -26,7 +26,7 @@ export class AuthService {
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                     console.log(user.password);
-                    this.token = response.json() && response.json().access_token ;
+                    let token = response.json() && response.json().access_token ;
                     let responseJSON = response.json()
                             
                 if ( response.status === 201) {
@@ -43,8 +43,8 @@ export class AuthService {
 
       }
 
-      public logout(){
-         this.token = null;
+      public logOUT(){
+       this.token = null;
         localStorage.removeItem('currentUser')
       }
       private handleError(error: Response) {
