@@ -1,1 +1,200 @@
-<h1>This is a sub route</h1>
+ <div>
+
+  <div class="appHeader">
+
+
+  </div>
+
+
+  <div class="mainBody">
+	 <div class="mainVertical">
+        <div> 
+          <img class = "img-responsive imageSide" src="/assets/img/learn-more.png" alt="learn more">
+        </div>
+        <div> 
+            <img class = "img-responsive imageSide" src="/assets/img/upload-data.png" alt="upload-data...">
+        </div>
+        <div> 
+            <img class = "img-responsive imageSide" src="/assets/img/practice.png" alt="practice..">
+         </div>
+         <div class="mainSideHorizontal">
+            <div>
+                <img class = "img-responsive imageSideButton" src="/assets/img/email.png" alt="email..">
+            </div>
+            <div>
+                <img class = "img-responsive imageSideButton" src="/assets/img/chat.png" alt="chat..">
+            </div>
+	      </div> 
+    </div>
+
+    <div class="mainSection-inner">
+	      <p class="getIntoOperations"> GET INTO OPERATIONS</p>
+	      <div class="innerSection">
+		      <div class ="operationData">
+		      	<div class="chooseCurrency">
+			    	<p class="One">Choose your couple of currencies</p>
+			        <p class="Other">Local Currency</p>
+			        <p class="Other">Foreign Currency</p>
+			    </div>
+			    <div class="chooseCurrencyBtn">
+			       <div class="currencies">   	
+			       </div>
+			       <div class="currencies1">
+			           <button class="RWF">{{ operation.currencyOne.symbol}}</button>
+			       </div>
+			       <div  currency-list ></div>
+
+			       <div class="currencies1">
+		             <button class="USD">{{operation.currencyTwo.symbol}}</button>
+		           </div>
+		          <div currency-list-two go="operation.pickCurrency()"></div>   	
+			    </div>
+			     <div class="titleCurrencyCharacteristics">
+			    	<p class="titleCC">Charactarize  each of your currencies</p>
+			        <p class="OtherHidden"></p>
+			        <p class="OtherHidden"></p>
+			     </div>
+
+			     <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	  <p class="titleIR">Interest Rate</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			    	  <input  type="number" name="InterestRate" class="InterestRateIT" />
+			    	 <!--  <div inpu-text-popup1 ng-if="operation.isLongEnough.isInterest_rate_InitLong == true"></div> -->
+
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+		 	           <input  type="number" name="InterestRate1" class="InterestRateIT" />
+		 	         <!--   <div inpu-text-popup2 ng-if="operation.isLongEnough.isTnterest_rate_Second == true"></div> -->
+
+		 	        </div>
+			    </div>
+			      <div class="operationFeaturesChar">
+			        <div class="titleInner2">
+			    	<p class="titleIR2">Forex Rate</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature2">
+			    	<input  type="number" name="Forex Rate" class="InterestRateIT" />
+
+			    	</div>
+			    	
+			      </div>
+			    <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	<p class="titleIR">Price Date</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			        <button  class="InterestRateIT">Now</button>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			
+                   </div>
+			    </div>
+
+			     <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	<p class="titleMT">Maturity Time</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			    	   <div class="firstLine">
+					    	<div class="">
+					           <button class="maturityTimeBtn">30</button>
+					    	</div>
+					    	<div class="">
+					           <button  class="maturityTimeBtn">60</button>
+					    	</div>
+					    	<div class="">
+					           <button    class="maturityTimeBtn">180</button>
+					    	</div>
+					    </div>
+					     <div class="seCondLine">
+					    	<div class="">
+					           <button class="maturityTimeBtn">90</button>
+					    	</div>
+					    	<div class="">
+					           <button  class="maturityTimeBtn">360</button>
+					    	 </div>
+					    	<div class="">
+					           <input  class="maturityTimeBtnType" type="text" name="MaturityTypes" placeholder="type">
+					    	</div>
+					    </div>
+
+			    	 </div>
+			    	<div class="OtherHiddenFeature">
+	                  <button class="MaturityDateBtn">Maturity date</button>
+                     </div>
+			    </div>
+		        
+		        <div class="operationFeaturesChar">
+			        <div class="titleInner">
+			    	   <p class="ExpectedDeprecitionBtn">Expected Depreciation</p>
+			    	</div>
+			    	<div class="OtherHiddenFeature">
+			
+                  <input type="number" name="Depreciation" class="InterestRateIT" />
+                	</div>
+			    	<div class="OtherHiddenFeature">
+		                 <button  class="computeBtn">HIT HERE AT THE END TO COMPUTE YOUR PREMIUM</button>
+		 	        </div>
+		 	        <spinner class ="spin" name="ComputeSpinner" img-src="../images/ajax-loader.gif"></spinner>
+
+			    </div>
+			  </div>
+
+			  <div class="operationResults">
+	              <p class="yourInsightTitle"> Your Insights</p>
+
+	              <p class="yourClientPremium"> Your Client's Premium</p>
+	              <div class="InsightsRange">
+
+	              	 <p class="yourClientPremiumHidden"> </p>
+	              	 <p class="yourClientPremiumMin">Min </p>
+	              	 <p class="yourClientPremiumMin">Max </p>
+	              </div>
+
+	              <div class="InsightsRange">
+				      
+				        <p class="yourClientPremiumMin">Value </p>
+				    	<div class="yourClientBtn">
+			                 <button class="insigRoundButton"></button>
+				    	</div>
+				    	<div class="yourClientBtn">
+			                  <button class="insigRoundButton"></button>
+			 	        </div>
+			       </div>
+
+
+	              <div class="InsightsRange">
+				      
+				        <p class="yourClientPremiumMin">Percentage </p>
+				    	<div class="yourClientBtn">
+			                 <button class="insigRoundButton"></button>
+				    	</div>
+				    	<div class="yourClientBtn">
+			                  <button class="insigRoundButton"></button>
+			 	        </div>
+			      </div>
+
+			      <p class="yourClientPremiumLongText">
+			           <strong>Customize Comments</strong><br>
+			           premium is the first estimate based on the <br>
+
+                    figures exposed during our meeting/on the phone.<br>
+
+                    Thanks for your trust and we look forward to sign the
+                    related contract soon</p>
+
+                   <p class="yourClientPremium"> What to do next ?</p>
+                     <div class="InsightsRange">
+
+	              	 <p class="yourClientPremiumMin">Print </p>
+	              	 <p class="yourClientPremiumMin">Save as Model </p>
+	              	 <p class="yourClientPremiumMin">Plot Graph</p>
+	              </div>
+                  <br>
+			  </div>
+		  </div>
+	</div>
+  </div>
+</div>
